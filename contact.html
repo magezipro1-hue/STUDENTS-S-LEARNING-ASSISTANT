@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .box{
+            background-color: white;
+            padding: 20px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h1{
+            text-align: center;
+            color: darkblue;
+        }
+
+        input, textarea{
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button{
+            background-color: darkblue;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: green;
+        }
+
+        #message{
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Contact Us</h1>
+
+    <p><strong>We appreciate your feedback. Please fill in the form below.</strong></p>
+
+    <form id="contactForm">
+
+        <label>Full Name</label>
+        <input type="text" id="name" required>
+
+        <label>Residence</label>
+        <input type="text" id="residence" required>
+
+        <label>Email</label>
+        <input type="email" id="email" required>
+
+        <label>Your Feedback</label>
+        <textarea id="feedback" rows="5" required></textarea>
+
+        <button type="submit">Submit Feedback</button>
+
+    </form>
+             <div style="text-align:center; margin-top:20px;">
+    <a href="index.html">
+        <button style="
+            background-color: darkblue;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+        ">
+            🏠 Return Home
+        </button>
+    </a>
+</div>
+    <p id="message"></p>
+
+</div>
+
+<script>
+
+document.getElementById("contactForm").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+
+    document.getElementById("message").innerHTML =
+    "Thank you " + name + "!<br>Your feedback has been submitted successfully ✅";
+
+    document.getElementById("contactForm").reset();
+
+});
+
+</script>
+<div class="footer">
+    <p>© 2026 Student Learning Assistant | ICT Science Project</p>
+</div>
+
+</body>
+</html>
